@@ -17,23 +17,26 @@ Please feel free to reach out and ask questions if you need any clarification.
 
 ### The Application
 
-We are very enthusiastic about Crypto! We would like to have a site to view the top 50 Cryptos based on Market Cap. In the first part of this proyect we would like to see a list of the 50 best cryptos, and we want to be able to filter them by: 
+We are very enthusiastic about Crypto! We would like to have a site to view the top 50 Cryptos based on Market Cap. In the first part of this proyect we would like to see a list of the 50 best cryptos, and we want to be able to filter them by:
 
-1) Name
-2) Price
-3) Market Cap
-4) Max Supply (For example, Bitcoin Max supply is 21 Million Bitcoins)
+1. Name
+2. Price
+3. Market Cap
+4. Circulating Supply (For example, Bitcoin Max supply is 21 Million Bitcoins, but the circulating supply is aprox. 18 million)
 
 ## Requirements
 
-As we said before, it can take you a couple of hours or a day,
+As we said before, it can take you a couple of hours or a day.
+
+You can use [this api](https://min-api.cryptocompare.com/) or any other api, just try to complete the requirements :)
 
 1. Use typescript
 2. Use Hooks
 3. Refactor the code
-4. Use tailwind
-5. Testing suite
-6. Good use of git (commits, pull requests, branches)
+4. Format values (dates, prices, etc)
+5. Use tailwind
+6. Testing suite
+7. Good use of git (commits, pull requests, branches)
 
 ## How to deliver
 
@@ -42,3 +45,24 @@ As we said before, it can take you a couple of hours or a day,
 3. Please document the repo and your code (using [JSDoc](https://jsdoc.app/))
 4. Explan your architecture, component design and development choices
 5. A summary of what else you could/would like to have done if you had more time.
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
