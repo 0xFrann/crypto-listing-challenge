@@ -2,7 +2,7 @@
 
 ### Take-Home Assignment
 
-## Descripcion
+## Description
 
 This exercise is for you, a candidate to join EVA as Frontend Developer, to develop a simple frontend application that meets the requirements for an imaginary product we want to build.
 
@@ -17,33 +17,32 @@ Please feel free to reach out and ask questions if you need any clarification.
 
 ### The Application
 
-We are very enthusiastic about Crypto! We would like to have a site to view the top 50 Cryptos based on Market Cap. In the first part of this proyect we would like to see a list of the 50 best cryptos, and we want to be able to filter them by:
+We are very enthusiastic about Crypto! We would like to have a site to view the top 50 Cryptos based on Market Cap. In the first part of this project, we would like to see a list of the 50 best cryptos, and we want to be able to filter them by:
 
 1. Name
 2. Price
 3. Market Cap
-4. Circulating Supply (For example, Bitcoin Max supply is 21 Million Bitcoins, but the circulating supply is aprox. 18 million)
+4. Circulating Supply (For example, Bitcoin Max supply is 21 Million Bitcoins, but the circulating supply is approx. 18 million)
 
 ## Requirements
 
 As we said before, it can take you a couple of hours or a day.
 
-You can use [this api](https://min-api.cryptocompare.com/) or any other api, just try to complete the requirements :)
-
-1. Use typescript
-2. Use Hooks
-3. Refactor the code
-4. Format values (dates, prices, etc)
-5. Use tailwind
-6. Testing suite
-7. Good use of git (commits, pull requests, branches)
+1. You can use [this api](https://min-api.cryptocompare.com/) or any other api (just try to complete the requirements)
+2. Use Typescript
+3. Use Hooks
+4. Refactor the code
+5. Format values (dates, prices, etc)
+6. Use TailwindCSS
+7. Testing suite
+8. Good use of git (commits, pull requests, branches)
 
 ## How to deliver
 
 1. Fork this Repo and share the link with us at the time to deliver
-2. Deploy this Repo (you can use vercel)
+2. Deploy this Repo (you can use Vercel)
 3. Please document the repo and your code (using [JSDoc](https://jsdoc.app/))
-4. Explan your architecture, component design and development choices
+4. Explain your architecture, Component design and development choices
 5. A summary of what else you could/would like to have done if you had more time.
 
 # Getting Started with Create React App
