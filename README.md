@@ -1,10 +1,10 @@
-# Senior Frontend developer challengue
+# Senior Frontend Developer Challenge
 
 ### Take-Home Assignment
 
 ## Description
 
-This exercise is for you, a candidate to join EVA as Frontend Developer, to develop a simple frontend application that meets the requirements for an imaginary product we want to build.
+With this exercise, we will evaluate your ability to develop a simple frontend application that meets the requirements for an imaginary product we want to build.
 
 Completing this should take you anywhere from a couple of hours to up to a day depending on your level of expertise, available time to focus, and level of detail you consider sufficient.
 
@@ -28,7 +28,7 @@ We are very enthusiastic about Crypto! We would like to have a site to view the 
 
 As we said before, it can take you a couple of hours or a day.
 
-1. You can use [this api](https://min-api.cryptocompare.com/) or any other api (just try to complete the requirements)
+1. You can use [this api](https://min-api.cryptocompare.com/) or any other API (just try to complete the requirements)
 2. Use Typescript
 3. Use Hooks
 4. Refactor the code
@@ -36,13 +36,14 @@ As we said before, it can take you a couple of hours or a day.
 6. Use TailwindCSS
 7. Testing suite
 8. Good use of git (commits, pull requests, branches)
+9. Use of [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit messages
 
 ## How to deliver
 
-1. Fork this Repo and share the link with us at the time to deliver
-2. Deploy this Repo (you can use Vercel)
+1. Clone this repo and share the link with us at the time to deliver (DO NOT FORK)
+2. Deploy this repo (you can use Vercel)
 3. Please document the repo and your code (using [JSDoc](https://jsdoc.app/))
-4. Explain your architecture, Component design and development choices
+4. On the README, explain your architecture, component design, and development choices.
 5. A summary of what else you could/would like to have done if you had more time.
 
 # Getting Started with Create React App
