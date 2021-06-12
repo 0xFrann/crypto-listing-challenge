@@ -1,17 +1,31 @@
 import React from "react";
 import "./App.css";
 
-export default class App extends React.Component {
-  constructor(props) {
+type CRYPTOS = { [key: string]: any };
+type DATA = {
+  key: string;
+  price: number;
+  market_cap: number;
+  circulatingSupply: number;
+  name: string;
+};
+
+type Props = unknown;
+type State = {
+  loading: boolean;
+  cryptos?: CRYPTOS;
+};
+
+export default class App extends React.Component<Props, State> {
+  constructor(props: Props) {
     super(props);
 
     this.state = {
       loading: false,
-      cryptos: {},
     };
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     this.setState({
       loading: true,
     });
@@ -25,9 +39,7 @@ export default class App extends React.Component {
         }
       })
       .then((json) => {
-        let data;
-
-        data = json.RAW;
+        const data = json.RAW;
 
         this.setState({
           loading: false,
@@ -37,21 +49,22 @@ export default class App extends React.Component {
       .catch((err) => console.log(err));
   }
 
-  render() {
+  render(): JSX.Element {
     if (this.state.loading) {
       return <div>loading...</div>;
     }
 
-    let formattedData = [];
+    const formattedData: DATA[] = [];
 
-    Object.keys(this.state.cryptos).map((crypto) => {
-      formattedData.push({
-        key: crypto,
-        price: this.state.cryptos[crypto]["USD"]["PRICE"],
-        market_cap: this.state.cryptos[crypto]["USD"].MKTCAP,
-        circulatingSupply: this.state.cryptos[crypto]["USD"].SUPPLY,
-        name: this.state.cryptos[crypto]["USD"]["FROMSYMBOL"],
-      });
+    Object.keys({ ...this.state.cryptos }).forEach((crypto) => {
+      this.state.cryptos &&
+        formattedData.push({
+          key: String(crypto),
+          price: Number(this.state.cryptos[crypto]["USD"]["PRICE"]),
+          market_cap: Number(this.state.cryptos[crypto]["USD"]["MKTCAP"]),
+          circulatingSupply: Number(this.state.cryptos[crypto]["USD"]["SUPPLY"]),
+          name: String(this.state.cryptos[crypto]["USD"]["FROMSYMBOL"]),
+        });
     });
 
     return (
@@ -76,7 +89,7 @@ export default class App extends React.Component {
           <tbody>
             {formattedData.map((data) => {
               return (
-                <tr>
+                <tr key={data.key}>
                   <td>Name: {data.name}</td>
                   <td>Price: {data.price}</td>
                   <td>Market Cap: {data.market_cap}</td>
