@@ -16,6 +16,7 @@ const App = (): JSX.Element => {
         fetcher: (resource, init) => fetch(resource, init).then((res) => res.json()),
         revalidateOnFocus: false,
         refreshInterval: 60000,
+        dedupingInterval: 60000,
       }}
     >
       <Table data={data || []} />

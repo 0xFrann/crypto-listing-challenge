@@ -5,16 +5,16 @@ export type HASHMAP = {
 };
 
 type COINS_DATA = {
-  [cryptoName: string]: {
-    [currencyName: string]: {
+  [fsyms: string]: {
+    [tsyms: string]: {
       [key: string]: string;
     };
   };
 };
 
 export type COINS_RAW_DATA = COINS_DATA & {
-  [cryptoName: string]: {
-    [currencyName: string]: {
+  [fsym: string]: {
+    [tsyms: string]: {
       PRICE: number;
       MKTCAP: number;
       SUPPLY: number;
