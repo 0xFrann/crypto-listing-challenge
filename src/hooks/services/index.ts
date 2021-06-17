@@ -19,7 +19,10 @@ const useMultiCoinPrice = ({
   );
 
   useEffect(() => {
-    if (data) setCryptos(formatMultiCoinData<COINS_RAW_DATA, CRYPTO_COIN[]>(data.RAW));
+    if (data) {
+      const formattedData = formatMultiCoinData<COINS_RAW_DATA, CRYPTO_COIN[]>(data.RAW);
+      setCryptos(formattedData);
+    }
   }, [data]);
 
   return { data: cryptos, ...rest } as SWRResponse<CRYPTO_COIN[], Error>;

@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { sortHashMapsByKey } from "../utils";
+import { formatCurrency, sortHashMapsByKey } from "../utils";
 import { CRYPTO_COIN } from "../types";
 
 type FILTER = "name" | "price" | "marketCap" | "circulatingSupply";
@@ -38,9 +38,9 @@ const Table = ({ data }: ITableProps): JSX.Element => {
             return (
               <tr key={data.key}>
                 <td>{data.name}</td>
-                <td>{data.price}</td>
-                <td>{data.marketCap}</td>
-                <td>{data.circulatingSupply}</td>
+                <td>{formatCurrency(data.price)}</td>
+                <td>{formatCurrency(data.marketCap)}</td>
+                <td>{formatCurrency(data.circulatingSupply)}</td>
               </tr>
             );
           })}
