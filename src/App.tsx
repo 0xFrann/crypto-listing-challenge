@@ -2,13 +2,12 @@ import React from "react";
 import { SWRConfig } from "swr";
 import Table from "./components/Table";
 import useMultiCoinPrice from "./hooks/services";
+import { ContainerStyles, WrapperStyles } from "./styles";
 
 const App = (): JSX.Element => {
   const { data, isValidating: loading, error } = useMultiCoinPrice({ tsyms: "USD" });
 
   if (error) return <div>Ups! There is some error at load the data</div>;
-
-  if (loading) return <div>Loading...</div>;
 
   return (
     <SWRConfig
@@ -19,7 +18,11 @@ const App = (): JSX.Element => {
         dedupingInterval: 60000,
       }}
     >
-      <Table data={data || []} />
+      <div className={WrapperStyles}>
+        <div className={ContainerStyles}>
+          <Table data={data || []} loading={loading} />
+        </div>
+      </div>
     </SWRConfig>
   );
 };
